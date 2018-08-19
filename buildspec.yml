@@ -1,0 +1,30 @@
+---
+version: 0.2
+
+# env:
+#   variables:
+#     DOCS_ROOT: /tmp/website
+#   parameter-store:
+#     DEPLOY_S3_BUCKET_NAME: CI_DOCS_CODEBUILD_DEPLOY_BUCKET
+
+phases:
+  install:
+    commands:
+      # - pip install awscli, sphinx
+      - echo "[CodeBuild] install"
+      - echo `pwd`
+      - echo ${CODEBUILD_SOURCE_VERSION]
+      - ls -l
+  build:
+    commands:
+      # - mkdocs build
+      - echo "[CodeBuild] build"
+      - echo `pwd`
+      - ls -l
+  post_build:
+    commands:
+      # - mv site/ /
+      # - echo s3://
+      # - aws s3 sync --exact-timestamp --delete site/ s3:///
+      - echo `pwd`
+      - echo "[CodeBuild] post_build"
