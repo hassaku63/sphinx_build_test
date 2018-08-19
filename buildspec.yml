@@ -13,7 +13,7 @@ phases:
       # - pip install awscli, sphinx
       - echo "[CodeBuild] install"
       - echo `pwd`
-      - echo ${CODEBUILD_SOURCE_VERSION]
+      - echo ${CODEBUILD_SOURCE_VERSION}
       - ls -l
   build:
     commands:
