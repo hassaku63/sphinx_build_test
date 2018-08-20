@@ -17,5 +17,5 @@ phases:
       - make html
   post_build:
     commands:
-      - echo ${DEPLOY_BUCKET}
-      # - aws s3 sync --exact-timestamp --delete site/ s3:///
+      - echo "Deploy to S3 ${DEPLOY_BUCKET}"
+      - aws s3 sync --exact-timestamp --delete build/html s3://${DEPLOY_BUCKET}/
