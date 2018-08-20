@@ -10,11 +10,12 @@ version: 0.2
 phases:
   install:
     commands:
-      # - pip install awscli, sphinx
       - echo "[CodeBuild] install"
+      - pip install -r requirements.txt
       - echo `pwd`
       - echo ${CODEBUILD_SOURCE_VERSION}
       - ls -l
+      - echo `which git`
   build:
     commands:
       # - mkdocs build
